@@ -1,12 +1,10 @@
 **FreeCodeCamp**- Information Security and Quality Assurance
 ------
 
+To run application:
 1) SET NODE_ENV to `test` without quotes
-2) Most logic will need done in `controllers/convertHandler.js` but do complete `routes/api.js`
-3) You will add any security features to `server.js`
-4) You will create all of the functional/unit tests in `tests/2_functional-tests.js` and `tests/1_unit-tests.js`
 
-
+Requirements:
 I will prevent the client from trying to guess(sniff) the MIME type. //DONE
 I will prevent cross-site scripting (XSS) attacks. //DONE
 I can GET /api/convert with a single parameter containing an accepted number and unit and have it converted. (Hint: Split the input by looking for the index of the first character which will mark the start of the unit) //DONE
