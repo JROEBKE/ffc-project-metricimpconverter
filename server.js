@@ -1,9 +1,8 @@
 'use strict';
-require('dotenv').config();
+
 
 var express     = require('express');
 var bodyParser  = require('body-parser');
-var expect      = require('chai').expect;
 var cors        = require('cors');
 
 var apiRoutes         = require('./routes/api.js');
@@ -58,7 +57,7 @@ app.listen(process.env.PORT || 3000, function () {
           console.log('Tests are not valid:');
           console.log(error);
       }
-    }, 1500);
+    }, 3500);
   }
 });
 
