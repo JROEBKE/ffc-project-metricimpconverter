@@ -8,8 +8,8 @@
 
 'use strict';
 
-const { check, validationResult } = require('express-validator');
 var expect = require('chai').expect;
+var { check, validationResult } = require('express-validator');
 var ConvertHandler = require('../controllers/convertHandler.js');
 
 module.exports = function (app) {
