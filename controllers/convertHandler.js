@@ -16,14 +16,32 @@ function ConvertHandler() {
   
   //this function gets unit from input
   this.getNum = function(input) {
+    var result;
     var unitIndex = this.getUnitIndex(input);
-    var unitInput = input.slice(0, unitIndex);
+    var numInput = input.slice(0, unitIndex);
 
-    //here we consider decimation
-    var splittedValue = unitInput.split("/");
+    var splittedValue = numInput.split("/");
     var value = splittedValue[0];
+    console.log('value is '+value);
+
+    if (!value){
+      console.log('no number input');
+      return result; 
+    }
+
+    if (splittedValue.length>2){
+      console.log('double or more fraction');      
+      return result;
+    }
+
     var decimator = splittedValue[1] || 1;
-    var result = parseFloat(value/decimator).toFixed(5);     
+
+    if (splittedValue.length>2){
+      console.log('double or more fraction');      
+      return result;
+    }
+    
+    result = parseFloat(value/decimator).toFixed(5);     
     
     console.log('number is '+result);   
     return result;   
